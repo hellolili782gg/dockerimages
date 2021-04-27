@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  mtcode:
+  kalifullbase:
     runs-on: ubuntu-latest
     steps:
       -
@@ -37,7 +37,7 @@ jobs:
           context: ./mtcode
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/mtcode:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/mtcode:0.1.3
-            ghcr.io/${{ github.repository_owner }}/mtcode:latest
-            ghcr.io/${{ github.repository_owner }}/mtcode:0.1.3
+            ${{ secrets.DOCKERHUB_USERNAME }}/kalifullbase:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/kalifullbase:0.1.3
+            ghcr.io/${{ github.repository_owner }}/kalifullbase:latest
+            ghcr.io/${{ github.repository_owner }}/kalifullbase:0.1.3
