@@ -34,7 +34,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: ./kalibullbase
+          context: ./kalifullbase
           push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/kalifullbase:latest
