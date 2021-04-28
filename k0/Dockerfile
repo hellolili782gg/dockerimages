@@ -145,8 +145,9 @@ RUN apt install -y gnupg libgbm1 libxss1 libgtk-3-0 libnss3 libxkbfile1 libsecre
     sudo dpkg -i 1.deb && sudo rm 1.deb && \
     apt clean
 
-RUN apt-get install -y metasploit-framework
-RUN apt-get install -y openvas
+RUN apt-get install -y metasploit-framework openvas && \
+    apt clean
+
 
 RUN echo "v0.1.0" > /mtcode_version.txt
 # RUN apt install -y python3-dev python3-venv
