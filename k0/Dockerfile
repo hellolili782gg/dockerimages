@@ -147,6 +147,7 @@ RUN apt install -y gnupg libgbm1 libxss1 libgtk-3-0 libnss3 libxkbfile1 libsecre
 
 RUN apt-get install -y metasploit-framework openvas && \
     apt clean
+    
 
 
 RUN echo "v0.1.0" > /mtcode_version.txt
