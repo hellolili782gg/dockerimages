@@ -139,7 +139,16 @@ RUN apt-get install -y kali-desktop-xfce xorg xfce4 xrdp dbus dbus-x11 && \
     apt clean
 
 
-RUN echo "v0.1.3" > /mtcode_version.txt
+
+RUN apt install -y gnupg libgbm1 libxss1 libgtk-3-0 libnss3 libxkbfile1 libsecret-1-0 && \
+    wget -O 1.deb https://go.microsoft.com/fwlink/?LinkID=760868 && \
+    sudo dpkg -i 1.deb && sudo rm 1.deb && \
+    apt clean
+
+RUN apt-get install -y metasploit-framework
+RUN apt-get install -y openvas
+
+RUN echo "v0.1.0" > /mtcode_version.txt
 # RUN apt install -y python3-dev python3-venv
 
 # RUN curl -sL https://deb.nodesource.com/setup_15.x | bash -&& apt-get install -y nodejs
